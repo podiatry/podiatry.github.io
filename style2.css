@@ -1,0 +1,96 @@
+/* Reset default styles */
+body,
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  color: #333;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header styles */
+header {
+  background-color: #333;
+  padding: 10px;
+}
+
+.header-title {
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+}
+
+/* Navigation styles */
+nav {
+  margin-top: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: #ddd;
+  padding: 10px;
+}
+
+.navbar a {
+  margin: 0 10px;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #555;
+}
+
+/* Hero section styles */
+.hero {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hero h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  margin-bottom: 5px;
+}
+
+/* Contact section styles */
+.contact-info {
+  margin-bottom: 10px;
+}
+
+.contact-info i {
+  margin-right: 5px;
+}
+
+.social-media a {
+  color: #333;
+  margin-right: 5px;
+}
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
