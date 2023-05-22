@@ -1,46 +1,37 @@
 
-/* CSS styles */
-
-/* CSS styles */
-/*<style>*/
-
 body {
   font-family: "Roboto", Arial, sans-serif;
   margin: 0;
   padding: 0;
   font-size: 16px;
   background-color: #f5f5f5;
-
-/*  background-image: url('tumblr_4c30f2683fd89ef3c3be77624367ab2c_4f22e2e1_500.gif');
+  /*
+  background-image: url('tumblr_4c30f2683fd89ef3c3be77624367ab2c_4f22e2e1_500.gif');
   background-repeat: repeat;
   background-position: center center;
-  background-attachment: fixed;*/
+  background-attachment: fixed;
+  */
 }
-
-/* Media query for smaller screens */
-/*@media screen and (max-width: 768px) {
-  body {
-    font-size: 14px;
-  }
-}*/
 
 .hero h1,
 .services h2,
 .gallery h2,
 .contact h2,
 .footer h2 {
-  /* font-family: "Playfair Display", serif; */
+  /* 
+  font-family: "Playfair Display", serif; 
+  */
 }
 
 header {
   background-color: #fff;
   padding: 20px;
   text-align: center;
-  /* text-color:#ffffff; */
-  /* background-image: url(''); */
-
-
-/*  background-image: url('jan-kopriva-f17PV9v8xOw-unsplash.jpg');*/
+  /* 
+  text-color:#ffffff;
+  background-image: url('');
+  background-image: url('jan-kopriva-f17PV9v8xOw-unsplash.jpg');
+  */
   background-size: cover;
   background-position: center;
 }
@@ -74,7 +65,9 @@ body {
   padding: 0;
   font-size: 16px;
   background-color: #fff;
-  /*  background-image: url('alex-bertha-Jyg7xHRmXiU-unsplash.jpg'); */
+  /*  
+  background-image: url('alex-bertha-Jyg7xHRmXiU-unsplash.jpg'); 
+  */
   background-size: cover;
   background-position: center;
 }
@@ -83,7 +76,9 @@ body {
   text-align: center;
   padding: 100px 20px; /* Add padding to the left and right */
   background-color: #fff;
-  /*  background-color: #ADB5BD; */
+  /*  
+  background-color: #ADB5BD; 
+  */
   background-size: cover;
   background-position: center;
   color: #000;
@@ -253,5 +248,80 @@ nav ul li a {
   font-size: 18px;
 }
 
+/* Media Queries for Mobile Devices */
+@media only screen and (max-width: 600px) {
+  /* Adjustments for smaller screens */
 
-/* </style>*/
+  /* Increase font sizes for better readability */
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  /* Reduce padding and margins for a more compact layout */
+  .container {
+    padding: 10px;
+  }
+
+  .hero {
+    padding: 50px;
+  }
+
+  .about {
+    padding: 20px;
+  }
+
+  .contact {
+    padding: 20px;
+  }
+
+  /* Modify the navigation to a vertical layout */
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  /* Adjust the size of the hero image */
+  .hero {
+    background-size: contain;
+    padding: 50px 10px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  .hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  /* Modify the contact form to stack the fields vertically */
+  .contact form input,
+  .contact form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  /* Adjust the size of the footer */
+  footer {
+    padding: 10px;
+  }
+}
+
+
+
+/* Media query for smaller screens */
+/*@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}*/
