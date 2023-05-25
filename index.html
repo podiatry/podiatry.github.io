@@ -2,8 +2,9 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <!-- Add the viewport meta tag to your HTML <head> section to ensure proper scaling on mobile devices. Include the following line: -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Dr. Neda Khoobyar</title>
 
@@ -16,28 +17,68 @@
   
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
   </head>
-      
+
 <style>
+
+.menu {
+/*  display: flex;*/
+  list-style: none;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.hamburger-menu {
+/* COMMENT OUT IF YOU WANT TO SHOW HAMBURGER MENU ON WEB*/
+  display: none;
+
+  cursor: pointer;
+/*///*/
+  position: fixed;
+  top: 20px; /* Adjust this value as needed */
+  right: 20px; /* Adjust this value as needed */
+  z-index: 9999; /* Make sure the hamburger menu appears above other elements */
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+
+  .menu.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+}
+
+
+
+
+
 </style>
-
-<!-- <div class="sidebar">
-  <ul>
-    <li><a href="#section1">Home</a></li>
-    <li><a href="#section2">About</a></li>
-    <li><a href="#section3">Services</a></li>
-    <li><a href="#section4">Contact</a></li>
-  </ul>
-</div>
-
-<div class="hamburger-icon"></div> -->
-
 
 <body>
   
   <header>
     <nav>
-      <ul>
+      <ul class=menu>
         <li><a href="#home">Home</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#about">About</a></li>
@@ -45,6 +86,11 @@
         <li><a href="#contact">Contact</a></li>
         <!-- <li><a href="#gallery">Gallery</a></li> -->
       </ul>
+      <div class="hamburger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
     </nav>
   </header>
 
@@ -62,12 +108,7 @@
         <p class="intro-text">
           I appreciate your trust in my knowledge and your care. 
         </p>
-        <!-- <h2>Welcome to my practice!</h2> -->
-
-        <!-- Honest advice on achieving comfort, and stability for each patient's unique situation. -->
-        <!-- Evaluation and treatment of any problem related to the foot.   -->
-        <!-- We treat patients of all ages. -->
-        <!-- 👣🦶 -->
+       
       <br>
       <a href="https://forms.gle/YrJkt3XuraDP4DtH7" target="_blank" class="btn">Schedule an Appointment</a>
       <a href="#services" class="btn">Explore Our Services</a>
@@ -195,8 +236,23 @@
       &copy; 2023 Klein and Khoobyar DPM PC 
       <!-- <br> All rights reserved. -->
     </p>
+
   <script>
-    // Add any JavaScript code specific to this template.
+    $(document).ready(function() {
+  $(".hamburger-menu").click(function() {
+    $(".menu").toggleClass("show");
+  });
+
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > 0) {
+      $(".hamburger-menu").addClass("fixed");
+    } else {
+      $(".hamburger-menu").removeClass("fixed");
+    }
+  });
+});
+
   </script>
+
 </body>
 </html>
