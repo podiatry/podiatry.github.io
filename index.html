@@ -29,6 +29,20 @@
 
 <style>
 
+    .btn-blue {
+      background-color: blue;
+      color: white;
+    }
+
+  .go-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+      display: none;
+    }
+
+
 body.menu-open {
 
 /* IF YOU WANT TO DISABLE SCROLLING WHEN MENU IS OPEN */
@@ -161,7 +175,7 @@ body.menu-open .menu {
 </style>
 
 <body>
-
+  <a href="#" class="go-to-top"><i class="fas fa-arrow-up"></i></a>
   <header  id="home">
      <div class="hamburger-menu" style="z-index: 9120000">
         <div class="bar"></div>
@@ -388,6 +402,25 @@ $(document).ready(function() {
   });
 });
 
+
+
+// go to top button
+
+   $(document).ready(function() {
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 100) {
+          $('.go-to-top').fadeIn();
+        } else {
+          $('.go-to-top').fadeOut();
+        }
+      });
+
+      $('.go-to-top').click(function() {
+        $('html, body').animate({ scrollTop: 0 }, 500);
+        return false;
+      });
+    });
+   
 
 
   </script>
