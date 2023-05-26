@@ -30,7 +30,10 @@
 <style>
 
 body.menu-open {
-  overflow: hidden;
+
+/* IF YOU WANT TO DISABLE SCROLLING WHEN MENU IS OPEN */
+/*  overflow: hidden;*/
+
 }
 
 .menu-overlay {
@@ -40,68 +43,66 @@ body.menu-open {
   width: 100%;
   height: 100%;
   background-color: white;
-  z-index: 9999;
+  z-index: 9999; /* Controls the stacking order of elements */
 }
 
 .menu {
-  z-index: 10000;
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   width: 250px;
-  transform: translateX(100%);
+  transform: translateX(100%); /* Initially moves the menu off-screen */
   background-color: white;
   padding: 20px;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out; /* Adds a smooth transition effect */
+  z-index: 10000; /* Controls the stacking order of elements */
 }
 
 body.menu-open .menu-overlay {
-  display: block;
+  display: block; 
+  /* Shows the menu overlay when the menu is open */
 }
 
 body.menu-open .menu {
-  transform: translateX(0);
+  transform: translateX(0); /* Moves the menu into the visible area */
 }
-
-
-/*body.menu-open {
-  background-color: white;
-}
-*/
-
-/*///*/
-
-/*.menu {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-*/
-/*///*/
-
 
 .menu {
-/*  display: flex;*/
+  /* display: flex; */ 
+  /* Uncomment if you want to use flexbox for the menu items */
+
   list-style: none;
 }
 
 .menu li {
-  margin-right: 20px;
+/*  margin-right: 20px;*/
 }
 
 .hamburger-menu {
-/* COMMENT OUT IF YOU WANT TO SHOW HAMBURGER MENU ON WEB*/
-  display: none;
+  /* COMMENT OUT IF YOU WANT TO SHOW HAMBURGER MENU ON WEB */
+  
+  display: none; /* Hides the hamburger menu by default */
 
   cursor: pointer;
-/*///*/
   position: fixed;
   top: 20px; /* Adjust this value as needed */
-  right: 20px; /* Adjust this value as needed */
+  right: 24px; /* Adjust this value as needed */
   z-index: 9999; /* Make sure the hamburger menu appears above other elements */
 }
+
+.hamburger-menu {
+  /* COMMENT OUT IF YOU WANT TO SHOW HAMBURGER MENU ON WEB */
+  
+  display: none; /* Hides the hamburger menu by default */
+  
+  cursor: pointer;
+  position: fixed;
+  top: 20px; /* Adjust this value as needed */
+  right: 24px; /* Adjust this value as needed */
+  z-index: 9999; /* Make sure the hamburger menu appears above other elements */
+}
+
 
 .bar {
   width: 25px;
@@ -110,30 +111,59 @@ body.menu-open .menu {
   margin: 5px 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px), (min-width: 789px) {
+/*@media (max-width: 768px) {*/
   .menu {
-    display: none;
+    display: none; 
+    /* Hides the menu on screens smaller than 768px */
   }
 
   .menu.show {
     display: flex;
     flex-direction: column;
-    align-items: center;
-        background-color: lightgray;
+/*    align-items: center;*/
+    background-color: lightgray;
+/*    justify-content: space-between; */
+    /* Align items horizontally */
 
-  }
+/*    justify-content: flex-start;*/
+/*    justify-content: flex-end;*/
+/*    justify-content: center;*/
+/*    justify-content: space-between;*/
+/*    justify-content: space-around;*/
+/*    justify-content: space-evenly;*/
+}
 
-  .hamburger-menu {
-    display: block;
+.hamburger-menu {
+    display: block; /* Shows the hamburger menu on screens smaller than 768px */
   }
 }
+
+/*
+.hamburger-menu-close {
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  z-index: 9999;
+}*/
+
+/*.hamburger-menu-close .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  margin: 5px 0;
+}
+*/
+
 
 </style>
 
 <body>
 
-  <header>
-     <div class="hamburger-menu">
+  <header  id="home">
+     <div class="hamburger-menu" style="z-index: 9120000">
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
@@ -146,28 +176,27 @@ body.menu-open .menu {
         <li><a href="#about">About</a></li>
         <li><a href="#covid">COVID-19</a></li>
         <li><a href="#contact">Contact</a></li>
-        <!-- <li><a href="#gallery">Gallery</a></li> -->
       </ul>
-     
     </nav>
+
   </header>
 
-  <section id="home">
+  <section>
 
-    <div class="hero">
+    <div class="hero" style="padding-top: 20px;">
       <div class="image-grid">
         <img src="o.jpg"        alt="Gallery 5">
       </div>
       <h1>Dr. Neda Khoobyar</h1>
       <h2>Foot Specialist</h2>
       <br>
-        <p class="intro-text">
+        <p class="intro-text"style="margin-right: 18px;margin-left: 18px;">
           <u>Podiatry</u>: A branch of medicine devoted to the study, diagnosis and medical treatment of disorders of the foot.
         </p>
-        <p class="intro-text">
+        <p class="intro-text"style="margin-right: 18px;margin-left: 18px;">
           We treat injuries as well as complications from ongoing health problems that can affect the lower extremity. 
         </p>
-        <p class="intro-text">
+        <p class="intro-text"style="margin-right: 18px;margin-left: 18px;">
           I appreciate your trust in my knowledge and your care. 
         </p>
        
@@ -177,7 +206,7 @@ body.menu-open .menu {
     </div>
   </section>
   
-  <section id="services" class="services">
+  <section id="services" class="services" style="padding-bottom: 0px;">
     <h2>Our Services</h2>
 
   <div class="service-container">
@@ -236,11 +265,16 @@ body.menu-open .menu {
  <section id="covid">
     <div class="hero">
       <h2>COVID-19</h2>
-        <p>Our office prioritizes the safety and well-being of our patients.</p> 
-        <p>In accordance with CDC guidelines, we have implemented additional precautions to ensure a secure environment.</p> 
-        <p>We kindly request all visitors to wear proper face coverings throughout their time in the office, as it contributes to the overall safety of everyone present.</p>
-        <p>To maintain a thorough level of cleanliness, we have a rigorous disinfecting routine in place, which may require additional time between  appointments.</p>
-        <p>Rest assured, our dedicated staff diligently cleans and sanitizes the office daily, providing you with a clean and hygienic space for your visit.</p>
+        <p style="margin-right: 20px;margin-left: 20px;">
+          Our office prioritizes the safety and well-being of our patients.</p> 
+        <p style="margin-right: 20px;margin-left: 20px;">
+          In accordance with CDC guidelines, we have implemented additional precautions to ensure a secure environment.</p> 
+        <p style="margin-right: 20px;margin-left: 20px;">
+          We kindly request all visitors to wear proper face coverings throughout their time in the office, as it contributes to the overall safety of everyone present.</p>
+        <p style="margin-right: 20px;margin-left: 20px;">
+          To maintain a thorough level of cleanliness, we have a rigorous disinfecting routine in place, which may require additional time between  appointments.</p>
+        <p style="margin-right: 20px;margin-left: 20px;">
+          Rest assured, our dedicated staff diligently cleans and sanitizes the office daily, providing you with a clean and hygienic space for your visit.</p>
     </div>
 
   <section id="about">
@@ -303,26 +337,58 @@ body.menu-open .menu {
       <!-- <br> All rights reserved. -->
     </p>
 
+
   <script>
 
+
 $(document).ready(function() {
-  $(".hamburger-menu").on("click", function() {
-    if ($(window).width() <= 768) {
+  function toggleMenu() {
+    var windowWidth = $(window).width();
+    if (windowWidth >= 0) {
       $(".menu").toggleClass("show");
-      $("html, body").toggleClass("no-scroll");
       $("body").toggleClass("menu-open");
+      $(".hamburger-menu").toggleClass("hide");
+      $(".close-menu").toggleClass("show");
+    }
+  }
+
+  function closeMenu() {
+    var windowWidth = $(window).width();
+    if (windowWidth >= 0) {
+      $(".menu").removeClass("show");
+      $("body").removeClass("menu-open");
+      $(".hamburger-menu").removeClass("hide");
+      $(".close-menu").removeClass("show");
+    }
+  }
+
+  $(document).on("click", ".hamburger-menu", function() {
+    toggleMenu();
+  });
+
+  $(document).on("click", ".close-menu", function() {
+    closeMenu();
+  });
+
+  $(".menu a").on("click", function() {
+    closeMenu();
+  });
+
+  // Close the menu when clicking outside of it
+  $(document).on("click", function(event) {
+    var target = $(event.target);
+    if (!target.closest(".menu").length && !target.closest(".hamburger-menu").length) {
+      closeMenu();
     }
   });
 
-  // Close the menu when a menu item is clicked
-  $(".menu a").on("click", function() {
-    if ($(window).width() <= 768) {
-      $(".menu").removeClass("show");
-      $("html, body").removeClass("no-scroll");
-      $("body").removeClass("menu-open");
-    }
+  // Close the menu on window resize
+  $(window).on("resize", function() {
+    closeMenu();
   });
 });
+
+
 
   </script>
 
