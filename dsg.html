@@ -1,0 +1,205 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Menu Example</title>
+    <style>
+        .menu {
+            display: none;
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        @media (max-width: 768px), (min-width: 789px) {
+            .menu {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .menu-toggle:checked + .menu {
+                display: block;
+            }
+        }
+
+        /* Additional styling for desktop screens */
+        @media (min-width: 789px) {
+            .menu.show {
+                display: flex;
+                padding-top: 20px; /* Adjust the value as needed */
+
+
+
+
+                justify-content: space-between; /* Align items horizontally */
+
+
+
+                
+            }
+            .menu.show li {
+                margin-bottom: 0; /* Remove vertical margin */
+            }
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+    <script>
+        window.onload = function () {
+            var menuToggle = document.getElementById('menu-toggle');
+            var menu = document.querySelector('.menu');
+
+            menuToggle.addEventListener('click', function () {
+                menu.classList.toggle('show');
+            });
+        };
+    </script>
+</body>
+</html>
+
+
+
+
+
+<!-- // -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Menu Example</title>
+    <style>
+        .menu {
+            display: none;
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        @media (max-width: 768px), (min-width: 789px) {
+            .menu {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .menu-toggle:checked + .menu {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+    <script>
+        window.onload = function () {
+            var menuToggle = document.getElementById('menu-toggle');
+            var menu = document.querySelector('.menu');
+
+            menuToggle.addEventListener('click', function () {
+                menu.classList.toggle('active');
+            });
+        };
+    </script>
+</body>
+</html>
+
+
+
+<!-- 
+
+In this updated code, I've added JavaScript to toggle the active class on the menu element when the menu toggle is clicked. The active class is responsible for showing or hiding the menu based on its display property in the CSS.
+
+Make sure to replace your existing code with this updated version and test it again. The menu should now toggle properly when clicked on screens larger than 789 pixels.
+ -->
+
+
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Menu Example</title>
+    <style>
+        .menu {
+            display: none;
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        @media (max-width: 768px), (min-width: 789px) {
+            .menu {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .menu-toggle:checked + .menu {
+                display: block;
+            }
+        }
+
+        /* Additional styling for desktop screens */
+        @media (min-width: 789px) {
+            .menu.show {
+                padding-top: 20px; /* Adjust the value as needed */
+            }
+            .menu.show li {
+                margin-bottom: 10px; /* Adjust the value as needed */
+            }
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+    <script>
+        window.onload = function () {
+            var menuToggle = document.getElementById('menu-toggle');
+            var menu = document.querySelector('.menu');
+
+            menuToggle.addEventListener('click', function () {
+                menu.classList.toggle('show');
+            });
+        };
+    </script>
+</body>
+</html>
