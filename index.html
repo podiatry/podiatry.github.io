@@ -1,242 +1,102 @@
 <!DOCTYPE html>
 <html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-
-  <!-- Add the viewport meta tag to your HTML <head> section to ensure proper scaling on mobile devices. Include the following line: -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta property="og:title" content="Dr. Neda Khoobyar">
-  <meta property="og:description" content="Treating all injuries and complications from ongoing health problems that can affect the lower extremity.">
-  <meta property="og:image" content="https://podiatry.github.io/234yhgty.jpg">
-  <meta property="og:url" content="https://podiatry.github.io">
-
-  <link rel="icon" type="image/x-icon" href="icon.ico">
-
-  <title>Dr. Neda Khoobyar</title>
-
-  <link rel="stylesheet" href="styles.css">
-  <!-- <link rel="stylesheet" href="path/to/styles.min.css"> -->
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-  </head>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- The viewport meta tag ensures proper scaling on mobile devices. -->
+    <!-- <title>Dr. Neda Khoobyar - Foot Specialist</title> -->
+    <title>Dr. Neda Khoobyar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="icon.ico">
+    <meta property="og:title" content="Dr. Neda Khoobyar">
+    <meta property="og:description" content="Treating all injuries and complications from ongoing health problems that can affect the lower extremity.">
+    <meta property="og:image" content="https://podiatry.github.io/234yhgty.jpg">
+    <meta property="og:url" content="https://podiatry.github.io">
+</head>
 <style>
-
-    .btn-blue {
-      background-color: blue;
-      color: white;
+  html {
+    background-color: #FFC0CB; /* Rose color */
+}
+    .pronunciation {
+        font-style: italic;
+        color: #777; /* Light gray color for pronunciation */
+        font-size: 14px;
+        margin-top: 5px; /* Adjust margin as needed */
     }
-
-  .go-to-top {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 9999;
-      display: none;
-    }
-
-
-body.menu-open {
-
-/* IF YOU WANT TO DISABLE SCROLLING WHEN MENU IS OPEN */
-/*  overflow: hidden;*/
-
-}
-
-.menu-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  z-index: 9999; /* Controls the stacking order of elements */
-}
-
-.menu {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 250px;
-  transform: translateX(100%); /* Initially moves the menu off-screen */
-  background-color: white;
-  padding: 20px;
-  transition: transform 0.3s ease-in-out; /* Adds a smooth transition effect */
-  z-index: 10000; /* Controls the stacking order of elements */
-}
-
-body.menu-open .menu-overlay {
-  display: block; 
-  /* Shows the menu overlay when the menu is open */
-}
-
-body.menu-open .menu {
-  transform: translateX(0); /* Moves the menu into the visible area */
-}
-
-.menu {
-  /* display: flex; */ 
-  /* Uncomment if you want to use flexbox for the menu items */
-
-  list-style: none;
-}
-
-.menu li {
-/*  margin-right: 20px;*/
-}
-
-.hamburger-menu {
-  /* COMMENT OUT IF YOU WANT TO SHOW HAMBURGER MENU ON WEB */
-  
-  display: none; /* Hides the hamburger menu by default */
-
-  cursor: pointer;
-  position: fixed;
-  top: 20px; /* Adjust this value as needed */
-  right: 24px; /* Adjust this value as needed */
-  z-index: 9999; /* Make sure the hamburger menu appears above other elements */
-}
-
-.hamburger-menu {
-  /* COMMENT OUT IF YOU WANT TO SHOW HAMBURGER MENU ON WEB */
-  
-  display: none; /* Hides the hamburger menu by default */
-  
-  cursor: pointer;
-  position: fixed;
-  top: 20px; /* Adjust this value as needed */
-  right: 24px; /* Adjust this value as needed */
-  z-index: 9999; /* Make sure the hamburger menu appears above other elements */
-}
-
-
-.bar {
-  width: 25px;
-  height: 3px;
-  background-color: #000;
-  margin: 5px 0;
-}
-
-@media (max-width: 768px), (min-width: 789px) {
-/*@media (max-width: 768px) {*/
-  .menu {
-    display: none; 
-    /* Hides the menu on screens smaller than 768px */
-  }
-
-  .menu.show {
-    display: flex;
-    flex-direction: column;
-/*    align-items: center;*/
-    background-color: lightgray;
-/*    justify-content: space-between; */
-    /* Align items horizontally */
-
-/*    justify-content: flex-start;*/
-/*    justify-content: flex-end;*/
-/*    justify-content: center;*/
-/*    justify-content: space-between;*/
-/*    justify-content: space-around;*/
-/*    justify-content: space-evenly;*/
-}
-
-.hamburger-menu {
-    display: block; /* Shows the hamburger menu on screens smaller than 768px */
-  }
-}
-
-/*
-.hamburger-menu-close {
-  display: none;
-  cursor: pointer;
-  position: fixed;
-  top: 20px;
-  right: 24px;
-  z-index: 9999;
-}*/
-
-/*.hamburger-menu-close .bar {
-  width: 25px;
-  height: 3px;
-  background-color: #000;
-  margin: 5px 0;
-}
-*/
-/*        .watermark {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: rgba(0, 0, 0, 0.5);
-            font-size: 24px;
-        }*/
-/*
-
-Diables ALL clicking.
     body {
-        pointer-events: none;
-    }
-        
-*/
+    background-color: #FFC0CB; /* Rose color */
+    margin: 0; /* Remove default margin for the body */
+    padding: 0; /* Remove default padding for the body */
+}
 
 </style>
-
 <body>
+  <!-- Up Arrow (too light right now) -->
   <a href="#" class="go-to-top"><i class="fas fa-arrow-up" style="color: lightgrey"></i></a>
-  <header  id="home">
-     <div class="hamburger-menu" style="z-index: 9120000">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-    </div>
 
-    <nav>
-      <ul class=menu>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#covid">COVID-19</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+  <!-- Header -->
+  <header id="home">
+      <!-- Hamburger Menu -->
+      <div class="hamburger-menu" style="z-index: 9120000">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+      </div>
 
+<!-- Navigation Menu -->
+      <nav>
+          <ul class="menu">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#covid">COVID-19</a></li>
+              <li><a href="#contact">Contact</a></li>
+          </ul>
+      </nav>
   </header>
 
   <section>
 
     <div class="hero" style="padding-top: 20px;">
+
+<!-- Profile Picture -->
+<!--       
       <div class="image-grid">
-        <img src="o.jpg"        alt="Gallery 5">
-      </div>
+        <img src="o.jpg" alt="Gallery 5">
+      </div> 
+-->
+
+<body>
+    <center>
       <h1>Dr. Neda Khoobyar</h1>
-      <h2>Foot Specialist</h2>
+      <h2>🦶 Foot Specialist 🦶</h2>
+      <p class="pronunciation">[Neh-Da Koo-Byar]</p>
+
       <br>
-        <p class="intro-text"style="margin-right: 18px;margin-left: 18px;">
-          <u>Podiatry</u>: A branch of medicine devoted to the study, diagnosis and medical treatment of disorders of the foot.
-        </p>
-        <p class="intro-text"style="margin-right: 18px;margin-left: 18px;">
-          We treat injuries as well as complications from ongoing health problems that can affect the lower extremity. 
-        </p>
-        <p class="intro-text"style="margin-right: 18px;margin-left: 18px;">
-          I appreciate your trust in my knowledge and your care. 
-        </p>
+
+      <p class="intro-text"style="margin-right: 18px;margin-left: 18px;">
+        <u>Podiatry</u>: A branch of medicine devoted to the study, diagnosis and medical treatment of disorders of the foot.
+      </p>
+      <p class="intro-text"style="margin-right: 18px;margin-left: 18px;">
+        We treat injuries as well as complications from ongoing health problems that can affect the lower extremity. 
+      </p>
+      <p class="intro-text"style="margin-right: 18px;margin-left: 18px;">
+        I appreciate your trust in my knowledge and your care. 
+      </p>
        
-      <br>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSepG4KtoeICTJDZJuHs8DLXBKc1VcWcozZGZkhs4H483zQGTA/viewform?usp=sf_link" target="_blank" class="btn" style="font-size: 18px;margin-right: 2px";>Schedule an Appointment</a>
-      <a href="#services" class="btn" style="font-size: 18px;">Explore Our Services</a>
+        <br>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSepG4KtoeICTJDZJuHs8DLXBKc1VcWcozZGZkhs4H483zQGTA/viewform?usp=sf_link" target="_blank" class="btn" style="font-size: 18px;margin-right: 2px";>Schedule an Appointment</a>
+        <a href="#services" class="btn" style="font-size: 18px;">Explore Our Services</a>
     </div>
   </section>
   
   <section id="services" class="services" style="padding-bottom: 0px;">
     <h2>Our Services</h2>
+    </center>
 
   <div class="service-container">
     <div class="service">
@@ -291,6 +151,8 @@ Diables ALL clicking.
     </div>
   </div>
 
+  <br><br>
+
  <section id="covid">
     <div class="hero">
       <h2>COVID-19</h2>
@@ -305,6 +167,10 @@ Diables ALL clicking.
         <p style="margin-right: 20px;margin-left: 20px;">
           Rest assured, our dedicated staff diligently cleans and sanitizes the office daily, providing you with a clean and hygienic space for your visit.</p>
     </div>
+  </section>
+  
+  <br>
+  <br>  
 
   <section id="about">
     <div class="hero">
@@ -319,10 +185,11 @@ Diables ALL clicking.
 
   <section id="seeyousoon" class="contact">
     <div class="contact-info">
+      <!-- <h2>We hope to see you soon!</h2> -->
       <h2>See you soon!</h2>
       <div class="image-grid">
         <img src="234yhgty.jpg" alt="Gallery 1">
-        <img src="g24.jpg"      alt="Gallery 2">
+        <!-- <img src="g24.jpg"      alt="Gallery 2"> -->
         <img src="32tg.jpg"     alt="Gallery 3">
         <img src="asfg.jpg"     alt="Gallery 4">
         <!-- <img src="o.jpg"        alt="Gallery 5"> -->
@@ -343,7 +210,9 @@ Diables ALL clicking.
           <!-- <a href="geo:0,0?q=123+Main+Street,City,State,Zip">Get directions</a> -->
         <p>To schedule an appointment, please fill out <a href="https://docs.google.com/forms/d/e/1FAIpQLSepG4KtoeICTJDZJuHs8DLXBKc1VcWcozZGZkhs4H483zQGTA/viewform?usp=sf_link" target="_blank">this form</a>.</p3>
       </div>
+
 <!-- bottom -->
+
         <div id="contact" class="contact-info">
           <br>
           <a href="mailto:myfootdoctor@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
@@ -366,79 +235,7 @@ Diables ALL clicking.
       <!-- <br> All rights reserved. -->
     </p>
 
-
-<script>
-
-$(document).ready(function() {
-  function toggleMenu() {
-    var windowWidth = $(window).width();
-    if (windowWidth >= 0) {
-      $(".menu").toggleClass("show");
-      $("body").toggleClass("menu-open");
-      $(".hamburger-menu").toggleClass("hide");
-      $(".close-menu").toggleClass("show");
-    }
-  }
-
-function closeMenu() {
-  var windowWidth = $(window).width();
-  if (windowWidth >= 0) {
-    $(".menu").removeClass("show");
-    $("body").removeClass("menu-open");
-    $(".hamburger-menu").removeClass("hide");
-    $(".close-menu").removeClass("show");
-  }
-}
-
-$(document).on("click", ".hamburger-menu", function() {
-  toggleMenu();
-});
-
-$(document).on("click", ".close-menu", function() {
-  closeMenu();
-});
-
-$(".menu a").on("click", function() {
-  closeMenu();
-});
-
-// Close the menu when clicking outside of it
-$(document).on("click", function(event) {
-  var target = $(event.target);
-  if (!target.closest(".menu").length && !target.closest(".hamburger-menu").length) {
-    closeMenu();
-  }
-});
-
-// Close the menu on window resize
-$(window).on("resize", function() {
-  closeMenu();
-});
-});
-
-// go to top button
-
-$(document).ready(function() {
-  $(window).scroll(function() {
-    if ($(this).scrollTop() > 100) {
-      $('.go-to-top').fadeIn();
-    } else {
-      $('.go-to-top').fadeOut();
-    }
-  });
-
-  $('.go-to-top').click(function() {
-    $('html, body').animate({ scrollTop: 0 }, 500);
-    return false;
-  });
-});
-
-// right-click
-window.addEventListener('contextmenu', function (e) {
-        e.preventDefault();
-    });
-
-</script>
+  <script src="script.js"></script>
 
 </body>
 </html>

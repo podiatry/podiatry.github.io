@@ -1,4 +1,8 @@
+/*html {
+    background-color: #FFC0CB; 
+}
 
+/* Rose color */
 
 
 body {
@@ -6,7 +10,7 @@ body {
   margin: 0;
   padding: 0;
   font-size: 16px;
-  background-color: #f5f5f5;
+  background-color: #FFC0CB;
   /*
   background-image: url('tumblr_4c30f2683fd89ef3c3be77624367ab2c_4f22e2e1_500.gif');
   background-repeat: repeat;
@@ -26,7 +30,8 @@ body {
 }
 
 header {
-  background-color: #fff;
+  background-color: #FFC0CB;
+/*  opacity: 0.23;*/
   padding: 20px;
   text-align: center;
   /* 
@@ -81,15 +86,22 @@ body {
 }
 
 .hero {
-  text-align: center;
-  padding: 100px 20px; /* Add padding to the left and right */
-  background-color: #fff;
+  background-color: #FFC0CB;
+/*ffc4c0*/
+/*  text-align: center;*/
+
+/* Add padding to the left and right */
+/*  padding: 100px 20px; */
+
+/*  opacity: 0.23;*/
+
+/*    background-color: #eb00b04a;*/
   /*  
   background-color: #ADB5BD; 
   */
-  background-size: cover;
-  background-position: center;
-  color: #000;
+/*  background-size: cover;*/
+/*  background-position: center;*/
+/*  color: #000;*/
 }
 
 
@@ -153,7 +165,10 @@ nav ul li a {
   width: 300px;
   margin: 20px;
   padding: 20px;
-  background-color: #f9f9f9;
+
+  background-color: #FFB1BB;
+/*D2B48C*/ blue
+/*  background-color: #f9f9f9;*/
   border-radius: 5px;
   text-align: center;
 }
@@ -228,7 +243,7 @@ nav ul li a {
 }
 
 .footer {
-  background-color: #f9f9f9;
+  background-color: #FFC0CB;
   padding: 20px;
   text-align: center;
 }
@@ -368,3 +383,163 @@ nav ul li a {
   }
 }
 
+
+/*was in HTML doc before, moved to bottom of CSS here*/
+
+    .btn-blue {
+      background-color: blue;
+      color: white;
+    }
+
+  .go-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+      display: none;
+    }
+
+
+body.menu-open {
+
+/* IF YOU WANT TO DISABLE SCROLLING WHEN MENU IS OPEN */
+/*  overflow: hidden;*/
+
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 9999; /* Controls the stacking order of elements */
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 250px;
+  transform: translateX(100%); /* Initially moves the menu off-screen */
+  background-color: white;
+  padding: 20px;
+  transition: transform 0.3s ease-in-out; /* Adds a smooth transition effect */
+  z-index: 10000; /* Controls the stacking order of elements */
+}
+
+body.menu-open .menu-overlay {
+  display: block; 
+  /* Shows the menu overlay when the menu is open */
+}
+
+body.menu-open .menu {
+  transform: translateX(0); /* Moves the menu into the visible area */
+}
+
+.menu {
+  /* display: flex; */ 
+  /* Uncomment if you want to use flexbox for the menu items */
+
+  list-style: none;
+}
+
+.menu li {
+/*  margin-right: 20px;*/
+}
+
+.hamburger-menu {
+  /* COMMENT OUT IF YOU WANT TO SHOW HAMBURGER MENU ON WEB */
+  
+  display: none; /* Hides the hamburger menu by default */
+
+  cursor: pointer;
+  position: fixed;
+  top: 20px; /* Adjust this value as needed */
+  right: 24px; /* Adjust this value as needed */
+  z-index: 9999; /* Make sure the hamburger menu appears above other elements */
+}
+
+.hamburger-menu {
+  /* COMMENT OUT IF YOU WANT TO SHOW HAMBURGER MENU ON WEB */
+  
+  display: none; /* Hides the hamburger menu by default */
+  
+  cursor: pointer;
+  position: fixed;
+  top: 20px; /* Adjust this value as needed */
+  right: 24px; /* Adjust this value as needed */
+  z-index: 9999; /* Make sure the hamburger menu appears above other elements */
+}
+
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  margin: 5px 0;
+}
+
+@media (max-width: 768px), (min-width: 789px) {
+/*@media (max-width: 768px) {*/
+  .menu {
+    display: none; 
+    /* Hides the menu on screens smaller than 768px */
+  }
+
+  .menu.show {
+    display: flex;
+    flex-direction: column;
+/*    align-items: center;*/
+    background-color: lightgray;
+/*    justify-content: space-between; */
+    /* Align items horizontally */
+
+/*    justify-content: flex-start;*/
+/*    justify-content: flex-end;*/
+/*    justify-content: center;*/
+/*    justify-content: space-between;*/
+/*    justify-content: space-around;*/
+/*    justify-content: space-evenly;*/
+}
+
+.hamburger-menu {
+    display: block; /* Shows the hamburger menu on screens smaller than 768px */
+  }
+}
+
+/*
+.hamburger-menu-close {
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  z-index: 9999;
+}*/
+
+/*.hamburger-menu-close .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  margin: 5px 0;
+}
+*/
+/*        .watermark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgba(0, 0, 0, 0.5);
+            font-size: 24px;
+        }*/
+/*
+
+Diables ALL clicking.
+    body {
+        pointer-events: none;
+    }
+        
+*/
