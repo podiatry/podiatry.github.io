@@ -2,15 +2,13 @@
     background-color: #FFC0CB; 
 }
 
-/* Rose color */
-
-
 body {
   font-family: "Roboto", Arial, sans-serif;
   margin: 0;
   padding: 0;
   font-size: 16px;
   background-color: #FFC0CB;
+  /* Rose color */
   /*
   background-image: url('tumblr_4c30f2683fd89ef3c3be77624367ab2c_4f22e2e1_500.gif');
   background-repeat: repeat;
@@ -30,7 +28,7 @@ body {
 }
 
 header {
-  background-color: #FFC0CB;
+/*  background-color: #FFC0CB;*/
 /*  opacity: 0.23;*/
   padding: 20px;
   text-align: center;
@@ -45,15 +43,23 @@ header {
 
 /* animations */
 
-
-
-
 .btn,
 nav ul li a {
   transition: background-color 0.3s ease;
-  /* Apply sticky positioning to the navigation bar */
-  
 
+    /* Apply sticky positioning to the navigation bar */  
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px; /* Add this line */
+
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+    font-size: 18px;
+}
+
+nav ul li:first-child {
+    margin-top: 4px; /* Adjust this value as needed */
 }
 
 .btn:hover,
@@ -86,7 +92,7 @@ body {
 }
 
 .hero {
-  background-color: #FFC0CB;
+/*  background-color: #FFC0CB;*/
 /*ffc4c0*/
 /*  text-align: center;*/
 
@@ -166,9 +172,17 @@ nav ul li a {
   margin: 20px;
   padding: 20px;
 
-  background-color: #FFB1BB;
-/*D2B48C*/ blue
+  background-color: #f9f9f9;
+
+/*  background-color: #FFB1BB;*/
+/*pink*/
+
+/*  background-color: #D2B48C;*/
+/*brown*/
+
 /*  background-color: #f9f9f9;*/
+/*mostly white (original)*/
+
   border-radius: 5px;
   text-align: center;
 }
@@ -243,7 +257,7 @@ nav ul li a {
 }
 
 .footer {
-  background-color: #FFC0CB;
+/*  background-color: #FFC0CB;*/
   padding: 20px;
   text-align: center;
 }
